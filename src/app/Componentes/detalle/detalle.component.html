@@ -1,0 +1,22 @@
+
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-12 l-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <img src="{{datos.imagen}}" width="100%">
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <h1>{{datos.nombre}}</h1>
+            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore hic recusandae tenetur earum odit consequatur laborum nihil beatae adipisci ea neque, obcaecati temporibus accusantium, asperiores nulla repellendus velit dolor porro.</div>
+            <h3>Precio Unidad: {{datos.precio | currency}} COP</h3>
+            <div>
+                <button type="button" class="btn btn-primary" (click)="Agregar(datos)">Agregar al Carrito</button>  
+            </div>
+        </div>
+       
+        
+
+    </div>
+
+</div>

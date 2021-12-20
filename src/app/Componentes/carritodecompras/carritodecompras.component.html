@@ -1,0 +1,74 @@
+<div class="container">
+    <div class="row">
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Imagen</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Total</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of carrito.carrito">
+                <th scope="row">
+                    <img src="{{item.imagen}}" class="imagencarrito">
+                </th>
+                <td>{{item.nombre}}</td>
+                <td>{{item.precio | currency}}</td>
+                <td>{{item.cantidad}}</td>
+                <td>{{item.precio * item.cantidad | currency}}</td>
+                <td>
+                    <button type="button" class="btn btn-danger" (click)="QuitarElemento(item.id)">X</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div>Total: {{carrito.Total | currency}}</div>
+
+
+
+    </div>
+    <div class="row">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Realizar Pedido: {{carrito.Total | currency}}</button>
+    
+    
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Realizar Pedido</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                
+                  <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Nombre:</label>
+                    <input type="text" class="form-control" id="recipient-name" [(ngModel)]="nombre">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Teléfono:</label>
+                    <input type="text" class="form-control" id="recipient-name" [(ngModel)]="telefono">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Dirección:</label>
+                    <input type="text" class="form-control" id="recipient-name" [(ngModel)]="direccion">
+                  </div>
+                  
+                
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="realizarpedido()">Crear Pedido</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+    </div>
+</div>

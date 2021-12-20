@@ -1,0 +1,4 @@
+div#divmensajes {
+    position: absolute;
+    z-index: 999;
+}

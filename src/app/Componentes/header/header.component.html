@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" routerLink="/">SJC Shop</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" routerLink="/">Home <span class="sr-only">(current)</span></a>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">Categorias</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" routerLink="/hombre" >Hombre</a>
+            <a class="dropdown-item" routerLink="/mujer" >Mujer</a>
+            <a class="dropdown-item" routerLink="/accesorios">Accesorios</a>
+            <a class="dropdown-item" routerLink="/gadgets" >Gadgets Tecnológicos</a>
+            <a class="dropdown-item" href="#"></a>
+          </div>
+        </li>
+
+        <a class="nav-link" routerLink="/registro">Registro News</a>
+        <a class="nav-link" routerLink="/contactenos">Contactenos</a>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">Administración</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" routerLink="Administracion/registro-usuarios" >Control Usuarios</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#"></a>
+          </div>
+        </li>
+
+        <li>
+          <img src="assets/Imatienda/Carrito.jpg" routerLink="/carritodecompras">
+          <span class="badge badge-success">{{carrito.carrito.length}}</span>
+        </li>
+       
+      </div>
+    </div>
+  </nav>

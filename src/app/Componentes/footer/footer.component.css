@@ -1,0 +1,34 @@
+div#footer {
+    bottom: 1px;
+    text-align: center;
+    height: 122px;
+}
+
+div#footer {
+    top: 661px;
+}
+
+.row {
+    padding: 13px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.row {
+background:url("src/assets/Imatienda/Footer3.jpg");
+}
+
+div#footer {
+    margin-top: 20px;
+}
+
+img#redes {
+    width: 84px;
+}
+
+.row.espacio {
+    margin-top: 30px;
+    border-top: solid 1px #ebebeb;
+    padding-top: 13px;
+}
+
